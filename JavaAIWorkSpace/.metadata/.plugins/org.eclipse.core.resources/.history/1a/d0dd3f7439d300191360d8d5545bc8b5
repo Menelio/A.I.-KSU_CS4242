@@ -1,11 +1,3 @@
-// Course: CS4242
-// Student name: Menelio Alvarez
-// Student ID: 000874829
-// Assignment #: #1
-// Due Date: September 13, 2019
-// Signature: _________________
-// Score: _________________
-
 package vac.main;
 
 import javafx.application.Application;
