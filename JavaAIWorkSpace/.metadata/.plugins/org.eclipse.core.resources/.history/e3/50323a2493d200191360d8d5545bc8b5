@@ -1,0 +1,133 @@
+package vac.main;
+
+import java.io.File;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class VacuumCleanerMain extends Application  {
+//Global variables
+	private VacuumAgent vacuum;
+	private boolean vacuumExists;//check if vacuum has been created
+	
+	//status of each space (clean/dirty)
+	private boolean spaceAIsClean;
+	private boolean spaceBIsClean;
+	
+	
+	//Image Of the world states
+	private Image dirtAB_vac = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtAB_Vac.png"); 
+	private Image dirtA_vac = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtA_Vac.png");
+	private Image dirtB_vac = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtB_Vac.png");
+	private Image dirt_vac = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/Dirt_Vac.png");
+	
+	private Image dirtAB_vacA = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtAB_VacA.png"); 
+	private Image dirtA_vacA = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtA_VacA.png");
+	private Image dirtB_vacA = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtB_VacA.png");
+	private Image dirt_vacA = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/Dirt_VacA.png");
+	
+	private Image dirtAB_vacB = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtAB_VacB.png"); 
+	private Image dirtA_vacB = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtA_VacB.png");
+	private Image dirtB_vacB = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/DirtB_VacB.png"); 
+	private Image dirt_vacB = new Image("file:/C:/Users/Manny/Desktop/KSU/2019_Artificial%20Intelligence/Assignment%201/JavaWorkSpace/VacuumCleaner/assests/Dirt_VacB.png");
+	
+	//buttons
+	Button statusA = new Button("Add dirt to space A");//add or remove dirt from A
+	Button statusB = new Button("Add dirt to space B");//add or remove dirt from B
+	Button placeVacA = new Button("Add dirt to space A");//place vacuum in A
+	Button placeVacB = new Button("Add dirt to space B");//place vacuum in B
+	
+	//Anchor pane to set buttons and grid pane
+	private AnchorPane aPane = new AnchorPane();
+	//GridPane for vacuum world
+	private GridPane gPane = new GridPane();
+	
+	//Image View 
+	private ImageView imgVw = new ImageView(dirt_vac);
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage stage) throws Exception {
+		
+		
+		
+		//add buttons to grid pane
+		gPane.add(statusA , 0, 1 , 10, 0);
+		gPane.add(statusB , 1, 1);
+		gPane.add(placeVacA , 0, 2);
+		gPane.add(placeVacB , 1, 2);
+
+		statusA .setOnAction(e->{
+			imgVw.setImage(dirtA_vacA); 
+	
+		});
+
+		//position and place Image of Environment in anchor pane
+		aPane.getChildren().add(imgVw);
+		AnchorPane.setTopAnchor(imgVw, 0.0);
+		//position and place GridPane in AnchorPane
+		aPane.getChildren().add(gPane);
+		AnchorPane.setTopAnchor(gPane, 320.0);
+		
+		//Set up window
+		Scene scene = new Scene(aPane);
+		stage.setScene(scene);
+		stage.show();
+		
+	}
+	//Update Environment
+	public void Environment () {
+		//update imgVw based on Environment booleans
+		if(spaceAIsClean && spaceBIsClean && !vacuumExists) {//If vacuum has not been placed
+			imgVw.setImage(dirt_vac); 
+		}else if(!spaceAIsClean && spaceBIsClean && !vacuumExists) {
+			imgVw.setImage(dirtA_vac); 
+		}else if(spaceAIsClean && !spaceBIsClean && !vacuumExists) {
+			imgVw.setImage(dirtB_vac); 
+		}else if(!spaceAIsClean && !spaceBIsClean && !vacuumExists) {
+			imgVw.setImage(dirtAB_vac); 
+		}else if(spaceAIsClean && spaceBIsClean && vacuumExists) {//If vacuum has been placed in A
+			if(vacuum.getPostion()) {
+				imgVw.setImage(dirt_vacA);
+			}
+		}else if(!spaceAIsClean && spaceBIsClean && vacuumExists) {
+			if(vacuum.getPostion()) {
+				imgVw.setImage(dirtA_vacA);
+			}
+		}else if(spaceAIsClean && !spaceBIsClean && vacuumExists) {
+			if(vacuum.getPostion()) {
+				imgVw.setImage(dirtB_vacA);
+			} 
+		}else if(!spaceAIsClean && !spaceBIsClean && vacuumExists) {
+			if(vacuum.getPostion()) {
+				imgVw.setImage(dirtAB_vacA);
+			} 
+		}else if(spaceAIsClean && spaceBIsClean && vacuumExists) {//If vacuum has been placed in B
+			if(!vacuum.getPostion()) {
+				imgVw.setImage(dirt_vacB);
+			}
+		}else if(!spaceAIsClean && spaceBIsClean && vacuumExists) {
+			if(!vacuum.getPostion()) {
+				imgVw.setImage(dirtA_vacB);
+			}
+		}else if(spaceAIsClean && !spaceBIsClean && vacuumExists) {
+			if(!vacuum.getPostion()) {
+				imgVw.setImage(dirtB_vacB);
+			} 
+		}else if(!spaceAIsClean && !spaceBIsClean && vacuumExists) {
+			if(!vacuum.getPostion()) {
+				imgVw.setImage(dirtAB_vacB);
+			} 
+		}
+	}
+
+}

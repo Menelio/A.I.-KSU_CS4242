@@ -1,0 +1,53 @@
+package vac.main;
+
+import java.io.File;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class VacuumCleanerMain extends Application  {
+//Global variables
+	//status of each space (clean/dirty
+	private boolean spaceAisClean;
+	private boolean spaceBisClean;
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage stage) throws Exception {
+		//Image Of the world states
+		File file = new File("C:\\Users\\Manny\\Desktop\\KSU\\2019_Artificial Intelligence\\Assignment 1\\JavaWorkSpace\\VacuumCleaner\\assests\\DirtAB_VacA.png");
+		Image dirtAB_vacA = new Image(file.toURI().toString()); 
+		ImageView imgVw = new ImageView(dirtAB_vacA);
+		//Anchor pane to set buttons and grid pane
+		AnchorPane aPane = new AnchorPane();
+		//GridPane for vacuum world
+		GridPane gPane = new GridPane();
+		
+		//buttons
+		Button btn = new Button("test");
+		
+		
+		gPane.add(imgVw, 0, 0);
+		gPane.add(btn, 0, 1);
+		//place GridPane in AnchorPane
+		aPane.getChildren().add(gPane);
+		
+		
+		//Set up window
+		Scene scene = new Scene(aPane);
+		stage.setScene(scene);
+		stage.show();
+		
+		
+	}
+
+}
