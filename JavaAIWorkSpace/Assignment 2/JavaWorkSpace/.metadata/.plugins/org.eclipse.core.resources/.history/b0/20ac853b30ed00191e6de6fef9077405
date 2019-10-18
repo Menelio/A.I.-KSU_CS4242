@@ -1,7 +1,0 @@
-package eightTile;
-/*Class for creating Puzzle Box in gPanes
- * */
-public class PuzzleBoxPane {
-
-	/***/
-}

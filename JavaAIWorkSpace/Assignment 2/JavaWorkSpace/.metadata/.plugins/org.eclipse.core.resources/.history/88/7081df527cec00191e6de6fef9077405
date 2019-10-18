@@ -1,7 +1,0 @@
-package eightTile;
-
-public class PuzzleBox {
-	//array of char for tiles, kept in order from position 1 to 9 ('*'= blank tile)
-	char[] tiles= new char[9];
-	
-}
