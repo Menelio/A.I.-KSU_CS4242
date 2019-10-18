@@ -1,0 +1,26 @@
+package RoutFinder;
+
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
+
+public class Node {
+	//global Var
+	//distance from goal
+	private int hn;
+	//Edges
+	
+	
+	/**<h1>Constructor</h1>
+	 * Creats node based on given param
+	 * <p>
+	 * @param name				: String name of this distination
+	 * @param hn 				: int value of h(n)
+	 * @postcondition 			: A Node object has been instantiated 
+	 */
+	public Node(String name, int hn) {
+		this.hn = hn;
+	}
+	
+
+}

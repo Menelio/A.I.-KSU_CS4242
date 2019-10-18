@@ -1,0 +1,41 @@
+package RoutFinder;
+
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
+
+public class Node {
+	//global Var
+	Circle circle;
+	//distance from goal
+	int hn;
+	Label name;
+	/**<h1>Constructor</h1>
+	 * Creats node based on given param
+	 * <p>
+	 * @param name				: String name of this distination
+	 * @param hn 				: int value of h(n)
+	 * @param verX				: Double for Vertical offset 
+	 * @param verY				: Double for Horizontal offset 
+	 * @postcondition 			: A Node object has been instantiated 
+	 */
+	public Node(String name, int hn, double verX, double verY) {
+		this.hn = hn;
+		this.name = new Label(name);
+		circle = new Circle();
+		circle.setRadius(10.0);
+		
+		AnchorPane.setTopAnchor(circle, verY);
+		AnchorPane.setLeftAnchor(circle, verX);
+	}
+	
+	/**<h1>Get Circle </h1>
+	 * Returns this nodes circle
+	 * <p>
+	 * @return circle 			: This nodes circle is returned
+	 * @postcondition 			: A circle Object is returned
+	 * */
+	public Circle getCircle() {
+		return circle;
+	}
+}

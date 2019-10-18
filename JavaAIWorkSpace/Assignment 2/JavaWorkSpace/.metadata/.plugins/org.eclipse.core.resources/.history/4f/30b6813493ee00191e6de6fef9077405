@@ -1,0 +1,25 @@
+package RoutFinder;
+
+
+
+public class Node {
+	//global Var
+	//distance from goal
+	private int hn;
+	//Edges
+	private Edge[] edges;
+	
+	/**<h1>Constructor</h1>
+	 * Creats node based on given param
+	 * <p>
+	 * @param name				: String name of this distination
+	 * @param hn 				: int value of h(n)
+	 * @postcondition 			: A Node object has been instantiated 
+	 */
+	public Node(String name, int hn, Edge[] edges) {
+		this.hn = hn;
+		this.edges= edges;
+	}
+	
+
+}

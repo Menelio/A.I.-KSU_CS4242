@@ -1,0 +1,70 @@
+package eightTile;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Skratch {
+
+	public static void main(String[] args) {
+		int r = (int)Math.random() * 4;
+		
+		System.out.println(r);
+		char[] g1 = {'1','*','3','2','8','4','7','6','5'};
+		char[] g2 = {'3','8','2','1','6','7','4','5','*'};
+		char[] g3 = {'3','2','8','5','4','6','7','1','*'};
+		char[] g4 = {'5','2','1','8','4','7','6','3','*'};
+
+		
+		PuzzleBox p1 = new PuzzleBox(g1,-1);
+		PuzzleBox p2 = new PuzzleBox(g1,0);
+		PuzzleBox p3 = new PuzzleBox(g1,2);
+		PuzzleBox p4 = new PuzzleBox(g1,1);
+		
+		ArrayList<PuzzleBox> pa = new ArrayList<PuzzleBox>();
+
+		pa.add(p1);
+		pa.add(p2);
+		pa.add(p3);
+		pa.add(p4);
+		
+		//sort possibleMoves
+		for(int i=0; i < pa.size(); i++) {
+			for(int j=0; j < pa.size(); j++) {
+				if(pa.get(i).getFn() < pa.get(j).getFn() ) {
+					Collections.swap(pa, i, j);
+				}
+			}
+		}
+		
+		System.out.println(p1.getFn());
+		System.out.println(p1.getHn());
+		System.out.println(p1.getGn());
+		display(p1);
+		System.out.println("---------------------p1");
+		
+		p1.genMoves();
+		for(int i=0; i< p1.getMoves().length; i++) {
+			System.out.println("-----------------------");
+			System.out.println(p1.getMoves()[i].getFn());
+			display(p1.getMoves()[i]);
+			
+		}
+		
+	
+	}
+	
+	public static void display(PuzzleBox b) {
+
+		System.out.print(b.getTiles()[0]);
+		System.out.print(b.getTiles()[1]);
+		System.out.println(b.getTiles()[2]);
+		System.out.print(b.getTiles()[3]);
+		System.out.print(b.getTiles()[4]);
+		System.out.println(b.getTiles()[5]);
+		System.out.print(b.getTiles()[6]);
+		System.out.print(b.getTiles()[7]);
+		System.out.println(b.getTiles()[8]);
+	}
+
+}

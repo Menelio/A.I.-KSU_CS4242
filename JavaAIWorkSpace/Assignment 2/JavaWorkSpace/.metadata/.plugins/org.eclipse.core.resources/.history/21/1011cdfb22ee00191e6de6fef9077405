@@ -1,0 +1,84 @@
+package RoutFinder;
+
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
+
+public class Node {
+	//global Var
+	private Circle circle;
+	//distance from goal
+	private int hn;
+	private Label name;
+	//offsets
+	private double Xofst;
+	private double Yofst;
+	
+	/**<h1>Constructor</h1>
+	 * Creats node based on given param
+	 * <p>
+	 * @param name				: String name of this distination
+	 * @param hn 				: int value of h(n)
+	 * @param Xofst				: Double for Vertical offset 
+	 * @param Yofst				: Double for Horizontal offset 
+	 * @postcondition 			: A Node object has been instantiated 
+	 */
+	public Node(String name, int hn, double Xofst, double Yofst) {
+		this.hn = hn;
+		this.name = new Label(name+"\nh(n)="+hn);
+		this.Xofst = Xofst;
+		this.Yofst = Yofst;
+		this.name.setTextFill(javafx.scene.paint.Color.AZURE);
+		this.name.setScaleX(1000.50);
+		this.name.setScaleY(1000.75);
+		this.circle = new Circle();
+		this.circle.setRadius(40.0);
+		this.circle.setFill(javafx.scene.paint.Color.CORNFLOWERBLUE);
+		
+		AnchorPane.setTopAnchor(this.circle, Yofst);
+		AnchorPane.setLeftAnchor(this.circle, Xofst);
+		AnchorPane.setTopAnchor(this.name, (Xofst+22));
+		AnchorPane.setLeftAnchor(this.name, (Yofst+22));
+		
+	}
+	
+	/**<h1>Get Circle </h1>
+	 * Returns this node's circle
+	 * <p>
+	 * @return circle 			: This nodes circle is returned
+	 * @postcondition 			: A Circle Object is returned
+	 * */
+	public Circle getCircle() {
+		return this.circle;
+	}
+	
+	/**<h1>Get Lable </h1>
+	 * Returns this node's name Label
+	 * <p>
+	 * @return name 			: This nodes name Label is returned
+	 * @postcondition 			: A Label Object is returned
+	 * */
+	public Label getName() {
+		return this.name;
+	}
+	
+	/**<h1>Get Vertical Offset</h1>
+	 * Returns vertical offset of node
+	 * <p>
+	 * @return Yofst 			: Double virtical offset of node
+	 * @postongcondition		: A double has been returned 
+	 * */
+	public double getYofst() {
+		return Yofst;
+	}
+	
+	/**<h1>Get Horizontal Offset</h1>
+	 * Returns Horizontal offset of node
+	 * <p>
+	 * @return Xofst 			: Double Horizontal offset of node
+	 * @postongcondition		: A double has been returned 
+	 * */
+	public double getXofst() {
+		return Xofst;
+	}
+}
