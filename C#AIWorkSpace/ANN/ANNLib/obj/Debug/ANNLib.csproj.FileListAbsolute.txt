@@ -1,0 +1,5 @@
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ANNLib\bin\Debug\ANNLib.dll
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ANNLib\bin\Debug\ANNLib.pdb
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ANNLib\obj\Debug\ANNLib.dll
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ANNLib\obj\Debug\ANNLib.pdb
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ANNLib\obj\Debug\ANNLib.csprojResolveAssemblyReference.cache

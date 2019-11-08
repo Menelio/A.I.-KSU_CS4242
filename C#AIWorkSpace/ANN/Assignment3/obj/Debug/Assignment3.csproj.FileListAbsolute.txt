@@ -1,0 +1,8 @@
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\bin\Debug\Assignment3.exe.config
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\bin\Debug\Assignment3.exe
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\bin\Debug\Assignment3.pdb
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\bin\Debug\ANNLib.dll
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\bin\Debug\ANNLib.pdb
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\obj\Debug\Assignment3.csprojResolveAssemblyReference.cache
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\obj\Debug\Assignment3.exe
+C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\Assignment3\obj\Debug\Assignment3.pdb
