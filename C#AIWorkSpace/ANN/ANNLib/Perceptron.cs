@@ -52,11 +52,27 @@ namespace ANNLib
         /// Ativate the perceptron to generate output
         /// </summary>
         public void activate() {
-            
-            for (int i = 0; i < this.inputLayer.Length; i++) {
-                this.outputLayer.value = this.outputLayer.value + (this.inputLayer[i].value * this.weights[i].value); 
+            double temp = 1;// to prevent sticking
+            Boolean noStick = true;
+            for (int i = 0; i < inputLayer.Length; i++) {
+                if (inputLayer[i].value > 0) {
+                    noStick = false;
+                    break;
+                }
             }
+
+            for (int i = 0; i < this.inputLayer.Length; i++) {
+                if (noStick)
+                {
+                    this.outputLayer.value = this.outputLayer.value + (temp * this.weights[i].value);
+                }
+                else {
+                    this.outputLayer.value = this.outputLayer.value + (this.inputLayer[i].value * this.weights[i].value);
+                }
+            }
+         
             this.outputLayer.value = (Utils.sigmoid(outputLayer.value)*2)-1;
+         
         }
 
         /// <summary>
@@ -66,7 +82,6 @@ namespace ANNLib
         /// <param name="expected">excpected output</param>
         /// <param name="learningRate">learning rate</param>
         public void weightTrain(Node expected, double learningRate) {
-            
             double error =  expected.value - this.outputLayer.value;
             double[] adjustment = new double[this.inputLayer.Length];//delta to add to weights
 

@@ -65,11 +65,12 @@ namespace Assignment3
                     Console.WriteLine("---------------------------------epoch " + c);
                     Console.WriteLine(per.outputLayer.value);
 
-                    per.weightTrain(new Node(-1), .1);
+                    per.weightTrain(new Node(1), .1);
                     c++;
 
                 }
             }
         }
     }
+
 }
