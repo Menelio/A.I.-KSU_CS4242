@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANNLib", "ANNLib\ANNLib.csproj", "{2396F502-EBFD-4750-A556-C6736FB42980}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANNGUI", "ANNGUI\ANNGUI.csproj", "{9DE5AC92-D7BF-421D-BE0D-CF436A56DBAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerceptronGUI", "PerceptronGUI\PerceptronGUI.csproj", "{23455E88-2152-4DEA-AE14-6614E29097A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2396F502-EBFD-4750-A556-C6736FB42980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2396F502-EBFD-4750-A556-C6736FB42980}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2396F502-EBFD-4750-A556-C6736FB42980}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DE5AC92-D7BF-421D-BE0D-CF436A56DBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DE5AC92-D7BF-421D-BE0D-CF436A56DBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DE5AC92-D7BF-421D-BE0D-CF436A56DBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DE5AC92-D7BF-421D-BE0D-CF436A56DBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23455E88-2152-4DEA-AE14-6614E29097A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23455E88-2152-4DEA-AE14-6614E29097A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23455E88-2152-4DEA-AE14-6614E29097A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23455E88-2152-4DEA-AE14-6614E29097A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

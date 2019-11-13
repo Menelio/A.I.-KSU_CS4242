@@ -1,8 +1,0 @@
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\bin\Debug\ANNLib.dll
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\bin\Debug\ANNLib.pdb
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
-C:\Users\Manny\Desktop\KSU\2019_AI\Assignment 3\CSharpWorkSpace\ANN\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
