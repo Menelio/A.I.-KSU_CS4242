@@ -1,6 +1,7 @@
 ### Artificial Intelligence Assignments 
 
-##Assignment 1) Located in /JavaAIWorkSpace was to implement a performance-measuring environment simulator for the vacuum-cleanerworld. Your implementation should be modular so that the sensors, actuators, and environment characteristics (size, shape, dirt placement, etc.) can be changed easily.
+##  Assignment 1) 
+Located in /JavaAIWorkSpace was to implement a performance-measuring environment simulator for the vacuum-cleanerworld. Your implementation should be modular so that the sensors, actuators, and environment characteristics (size, shape, dirt placement, etc.) can be changed easily.
   
 ##Assignment 2) Located in /JavaAIWorkSpace was to To implement A* Algorithm to solve the following problems: 
     
