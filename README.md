@@ -1,1 +1,1 @@
-# A.I.-KSU_CS4242
+# Artificial Intelligence Assignments
